@@ -1,26 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thomarna <thomarna@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/08 06:03:06 by thomarna          #+#    #+#             */
-/*   Updated: 2024/10/08 22:44:15 by thomarna         ###   ########.fr       */
+/*   Created: 2024/10/08 21:03:26 by thomarna          #+#    #+#             */
+/*   Updated: 2024/10/08 21:45:47 by thomarna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	*ft_memset(void *s, int c, size_t n)
+int	ft_atoi(const char *nptr)
 {
-	size_t	i;
+	int	sign;
+	int	nb;
 
-	i = 0;
-	while (i < n)
+	sign = 1;
+	nb = 0;
+	while ((*nptr >= 9 && *nptr <= 13) || *nptr == 32)
+		nptr++;
+	if (*nptr == '+' || *nptr == '-')
 	{
-		((char *)s)[i] = c;
-		i++;
+		if (*nptr == '-')
+			sign = -sign;
+		nptr++;
 	}
-	return (s);
+	while (*nptr >= 48 && *nptr <= 57)
+	{
+		nb *= 10;
+		nb += *nptr - 48;
+		nptr++;
+	}
+	return (nb * sign);
 }

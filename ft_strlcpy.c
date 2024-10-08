@@ -6,13 +6,13 @@
 /*   By: thomarna <thomarna@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 10:04:27 by thomarna          #+#    #+#             */
-/*   Updated: 2024/10/08 10:10:39 by thomarna         ###   ########.fr       */
+/*   Updated: 2024/10/08 22:50:22 by thomarna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	strlcpy(char *dst, const char *src, size_t size)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	i;
 	size_t	j;
