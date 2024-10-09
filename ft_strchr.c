@@ -6,7 +6,7 @@
 /*   By: thomarna <thomarna@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 10:46:41 by thomarna          #+#    #+#             */
-/*   Updated: 2024/10/09 00:08:17 by thomarna         ###   ########.fr       */
+/*   Updated: 2024/10/09 15:04:25 by thomarna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,9 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	size_t	len;
-	char	*res;
-
-	len = ft_strlen(s);
-	res = ft_memchr(s, c, len);
-	if (c == '\0')
-		return ((char *)s + len);
-	return (res);
+	while (*s && *s != ((unsigned char)c))
+		s++;
+	if (*s || !((unsigned char)c))
+		return ((char *)s);
+	return (0);
 }

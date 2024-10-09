@@ -6,7 +6,7 @@
 /*   By: thomarna <thomarna@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 10:56:26 by thomarna          #+#    #+#             */
-/*   Updated: 2024/10/08 10:58:31 by thomarna         ###   ########.fr       */
+/*   Updated: 2024/10/09 15:25:33 by thomarna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	size_t	i;
 
 	i = 0;
-	if (!n)
+	if (n == 0)
 		return (0);
-	while (s1[i] == s2[i] && s1[i] && s2[i] && i < n - 1)
+	while (s1[i] == s2[i] && s1[i] && i < n - 1)
 		i++;
-	return (s1[i] - s2[i]);
+	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }
