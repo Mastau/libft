@@ -6,13 +6,11 @@
 /*   By: thomarna <thomarna@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 05:00:08 by thomarna          #+#    #+#             */
-/*   Updated: 2024/10/09 11:33:08 by thomarna         ###   ########.fr       */
+/*   Updated: 2024/10/11 18:24:00 by thomarna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isascii(int c)
 {
-	if (c >= 0 && c <= 127)
-		return (1);
-	return (0);
+	return (c >= 0 && c <= 127);
 }

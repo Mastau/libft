@@ -1,16 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thomarna <thomarna@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/08 04:38:16 by thomarna          #+#    #+#             */
-/*   Updated: 2024/10/11 18:23:03 by thomarna         ###   ########.fr       */
+/*   Created: 2024/10/11 16:33:03 by thomarna          #+#    #+#             */
+/*   Updated: 2024/10/11 17:19:24 by thomarna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int c)
+#include "libft.h"
+
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	return ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'));
+	int	i;
+
+	if (s == NULL || f == NULL)
+		return ;
+	i = 0;
+	while (s[i])
+	{
+		f(i, &s[i]);
+		i++;
+	}
 }
