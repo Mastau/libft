@@ -1,16 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thomarna <thomarna@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/08 04:38:16 by thomarna          #+#    #+#             */
-/*   Updated: 2024/10/11 18:23:03 by thomarna         ###   ########.fr       */
+/*   Created: 2024/10/11 17:26:31 by thomarna          #+#    #+#             */
+/*   Updated: 2024/10/11 17:54:58 by thomarna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int c)
+#include "libft.h"
+
+void	ft_putstr_fd(char *s, int fd)
 {
-	return ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'));
+	if (s == NULL)
+		return ;
+	write(fd, s, ft_strlen(s));
 }

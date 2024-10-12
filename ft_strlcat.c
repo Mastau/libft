@@ -6,7 +6,7 @@
 /*   By: thomarna <thomarna@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 10:12:45 by thomarna          #+#    #+#             */
-/*   Updated: 2024/10/08 22:51:14 by thomarna         ###   ########.fr       */
+/*   Updated: 2024/10/11 18:22:55 by thomarna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t	src_len;
 	size_t	i;
 
+	if (dst == NULL && size == 0)
+		return (0);
 	dest_len = ft_strlen(dst);
 	src_len = ft_strlen(src);
 	if (size <= dest_len)

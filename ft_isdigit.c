@@ -6,13 +6,11 @@
 /*   By: thomarna <thomarna@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 04:54:58 by thomarna          #+#    #+#             */
-/*   Updated: 2024/10/08 06:30:26 by thomarna         ###   ########.fr       */
+/*   Updated: 2024/10/11 18:23:29 by thomarna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isdigit(int c)
 {
-	if (c >= '0' && c <= '9')
-		return (1);
-	return (0);
+	return (c >= '0' && c <= '9');
 }

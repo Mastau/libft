@@ -6,13 +6,11 @@
 /*   By: thomarna <thomarna@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 05:09:42 by thomarna          #+#    #+#             */
-/*   Updated: 2024/10/08 22:41:55 by thomarna         ###   ########.fr       */
+/*   Updated: 2024/10/12 13:58:32 by thomarna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isprint(int c)
 {
-	if (c >= 32 && c <= 126)
-		return (1);
-	return (0);
+	return (c >= 32 && c <= 126);
 }
