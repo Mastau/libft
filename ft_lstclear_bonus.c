@@ -1,16 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thomarna <thomarna@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/08 05:09:42 by thomarna          #+#    #+#             */
-/*   Updated: 2024/10/12 13:58:32 by thomarna         ###   ########.fr       */
+/*   Created: 2024/10/12 12:16:32 by thomarna          #+#    #+#             */
+/*   Updated: 2024/10/12 13:14:27 by thomarna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isprint(int c)
+#include "libft.h"
+
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	return (c >= 32 && c <= 126);
+	t_list	*node;
+	t_list	*node_next;
+
+	if (lst == NULL || del == NULL || *lst == NULL)
+		return ;
+	node = *lst;
+	while (node)
+	{
+		node_next = node->next;
+		ft_lstdelone(node, del);
+		node = node_next;
+	}
+	*lst = NULL;
 }

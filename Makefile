@@ -6,7 +6,7 @@
 #    By: thomarna <thomarna@42angouleme.fr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/08 22:19:48 by thomarna          #+#    #+#              #
-#    Updated: 2024/10/12 11:31:58 by thomarna         ###   ########.fr        #
+#    Updated: 2024/10/12 13:33:11 by thomarna         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,7 +54,9 @@ SRCS_BONUS= ft_lstnew_bonus.c \
 			ft_lstlast_bonus.c \
 			ft_lstadd_back_bonus.c \
 			ft_lstdelone_bonus.c \
-
+			ft_lstclear_bonus.c \
+			ft_lstiter_bonus.c \
+			ft_lstmap_bonus.c \
 
 OBJS = $(SRCS:.c=.o)
 
@@ -83,7 +85,7 @@ fclean: clean
 
 so:
 	$(CC) -nostartfiles -fPIC $(FLAGS) $(SRCS)
-	gcc -nostartfiles -shared -o libft.so $(OBJS)
+	gcc -nostartfiles -shared -o libft.so $(OBJS) $(SRCS_BONUS)
 
 re: fclean all
 
