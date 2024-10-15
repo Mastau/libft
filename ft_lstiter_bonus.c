@@ -6,7 +6,7 @@
 /*   By: thomarna <thomarna@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/12 13:14:48 by thomarna          #+#    #+#             */
-/*   Updated: 2024/10/12 13:32:15 by thomarna         ###   ########.fr       */
+/*   Updated: 2024/10/15 18:48:14 by thomarna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	if (lst == NULL)
+	if (f == NULL)
 		return ;
 	while (lst)
 	{
