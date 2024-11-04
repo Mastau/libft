@@ -57,12 +57,11 @@ FLAGS = -Werror -Wall -Wextra
 HEADER = .
 
 $(NAME): $(OBJS)
-	$(CC) -nostartfiles -fPIC $(FLAGS) $(SRCS) -I $(HEADER)
-	$(CC) -nostartfiles -shared -o $@ $< 
+	$(CC) -fPIC $(FLAGS) -shared -o $@ $(OBJS) -I $(HEADER)
 
 $(DIROBJS)/%.o: %.c
 	@mkdir -p $(@D)
-	$(CC) $(FLAGS) -I $(HEADER) $< -c -o $@
+	$(CC) $(FLAGS) -I $(HEADER) -c $< -o $@
 
 all: $(NAME)
 
