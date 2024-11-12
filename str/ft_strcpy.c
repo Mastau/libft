@@ -25,4 +25,3 @@ char	*ft_strcpy(char *dst, char *src)
 	dst[i] = '\0';
 	return (dst);
 }
-
