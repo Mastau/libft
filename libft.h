@@ -6,7 +6,7 @@
 /*   By: thomarna <thomarna@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 05:34:35 by thomarna          #+#    #+#             */
-/*   Updated: 2024/11/07 18:24:41 by thomarna         ###   ########.fr       */
+/*   Updated: 2024/11/14 16:02:18 by thomarna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,4 +75,6 @@ char				*get_next_line(int fd);
 int					ft_vdprintf(int fd, const char *format, va_list ap);
 int					ft_printf(const char *format, ...);
 void				clear_str(char **str);
+int					ft_strlentab(int size, char **strs);
+char				*ft_strjoinsep(int size, char **strs, char *sep);
 #endif
