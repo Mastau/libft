@@ -12,9 +12,9 @@
 
 #include "ft_printf.h"
 
-int ft_dprintf(int fd, const char *format, ...)
+int	ft_dprintf(int fd, const char *format, ...)
 {
-	int	res;
+	int		res;
 	va_list	args;
 
 	va_start(args, format);
