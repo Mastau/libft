@@ -6,7 +6,7 @@
 /*   By: thomarna <thomarna@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 05:34:35 by thomarna          #+#    #+#             */
-/*   Updated: 2024/11/19 13:15:29 by thomarna         ###   ########.fr       */
+/*   Updated: 2024/11/19 14:08:13 by thomarna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 						void (*del)(void *));
 char				*get_next_line(int fd);
-int					ft_vdprintf(int fd, const char *format, ...);
+int					ft_vdprintf(int fd, const char *format, va_list ap);
 int					ft_printf(const char *format, ...);
 void				clear_str(char **str);
 int					ft_strlentab(int size, char **strs);
