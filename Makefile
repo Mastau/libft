@@ -38,6 +38,7 @@ SRCS = 	ischeck/ft_isalpha.c \
 		printf/ft_printf.c \
 		printf/ft_vdprintf.c \
 		printf/ft_func.c \
+		printf/ft_dprintf.c \
 		gnl/get_next_line.c \
 		gnl/get_next_line_utils.c \
 		lst/ft_lstnew_bonus.c \
