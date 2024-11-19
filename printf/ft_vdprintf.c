@@ -6,12 +6,13 @@
 /*   By: thomarna <thomarna@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 12:53:10 by thomarna          #+#    #+#             */
-/*   Updated: 2024/11/04 19:15:05 by thomarna         ###   ########.fr       */
+/*   Updated: 2024/11/19 13:15:42 by thomarna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include "libft.h"
+#include <stdarg.h>
 
 static int	ft_convert(int fd, const char c, va_list ap)
 {
@@ -39,11 +40,13 @@ static int	ft_convert(int fd, const char c, va_list ap)
 	return (res);
 }
 
-int	ft_vdprintf(int fd, const char *format, va_list ap)
+int	ft_vdprintf(int fd, const char *format, ...)
 {
-	int	res;
+	int		res;
+	va_list	ap;
 
 	res = 0;
+	va_start(ap, format);
 	if (!(*format))
 		return (-1);
 	while (*format)
@@ -60,5 +63,6 @@ int	ft_vdprintf(int fd, const char *format, va_list ap)
 			res += write(fd, format, 1);
 		format++;
 	}
+	va_end(ap);
 	return (res);
 }
