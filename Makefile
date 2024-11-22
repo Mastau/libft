@@ -54,6 +54,7 @@ SRCS = 	ischeck/ft_isalpha.c \
 		str/ft_strlentab.c \
 		str/ft_strjoinsep.c \
 		utils/ft_swap.c \
+		str/ft_revstr.c \
 
 OBJS = $(SRCS:%.c=$(DIROBJS)/%.o)
 DIROBJS = .objs
