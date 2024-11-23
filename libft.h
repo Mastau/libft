@@ -6,7 +6,7 @@
 /*   By: thomarna <thomarna@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 05:34:35 by thomarna          #+#    #+#             */
-/*   Updated: 2024/11/22 17:20:05 by thomarna         ###   ########.fr       */
+/*   Updated: 2024/11/23 18:59:46 by thomarna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,14 @@
 # include <stdarg.h>
 # include <stdlib.h>
 # include <unistd.h>
+
+# ifndef INT_MAX
+#  define INT_MAX 2147483647
+# endif
+
+# ifndef INT_MIN
+#  define INT_MIN -2147483648
+# endif
 
 typedef struct s_list
 {
