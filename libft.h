@@ -6,7 +6,7 @@
 /*   By: thomarna <thomarna@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 05:34:35 by thomarna          #+#    #+#             */
-/*   Updated: 2024/11/23 18:59:46 by thomarna         ###   ########.fr       */
+/*   Updated: 2024/11/24 17:30:39 by thomarna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,4 +88,5 @@ int					ft_strlentab(int size, char **strs);
 char				*ft_strjoinsep(int size, char **strs, char *sep);
 void				ft_swap(int *a, int *b);
 char				*ft_revstr(char *str);
+int					ft_splitlen(char **split);
 #endif
