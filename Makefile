@@ -56,6 +56,7 @@ SRCS = 	ischeck/ft_isalpha.c \
 		utils/ft_swap.c \
 		str/ft_revstr.c \
 		utils/ft_splitlen.c \
+		str/ft_atof.c \
 
 OBJS = $(SRCS:%.c=$(DIROBJS)/%.o)
 DIROBJS = .objs
@@ -64,7 +65,7 @@ FLAGS = -Werror -Wall -Wextra
 HEADER = .
 
 $(NAME): $(OBJS)
-	$(CC) -fPIC $(FLAGS) -shared -o $@ $(OBJS) -I $(HEADER)
+	$(CC) -fPIC $(FLAGS) -shared -o $@ $(OBJS) -I $(HEADER) -lm
 
 $(DIROBJS)/%.o: %.c
 	@mkdir -p $(@D)
