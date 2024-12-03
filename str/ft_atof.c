@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <math.h>
 #include "libft.h"
+#include <math.h>
 
 double	ft_atof(const char *str)
 {
@@ -31,6 +31,6 @@ double	ft_atof(const char *str)
 		int_part = int_part * 10 + (*str++ - '0');
 	if (*str == '.' && *str++)
 		while (ft_isdigit(*str))
-			dec_part+= (pow(10, i--) * (*str++ - '0'));
+			dec_part += (pow(10, i--) * (*str++ - '0'));
 	return (sign * (int_part + dec_part));
 }
