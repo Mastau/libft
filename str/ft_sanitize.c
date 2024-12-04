@@ -6,9 +6,11 @@
 /*   By: thomarna <thomarna@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 14:08:47 by thomarna          #+#    #+#             */
-/*   Updated: 2024/12/04 14:08:52 by thomarna         ###   ########.fr       */
+/*   Updated: 2024/12/04 14:10:28 by thomarna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_sanitize(char **av)
 {
